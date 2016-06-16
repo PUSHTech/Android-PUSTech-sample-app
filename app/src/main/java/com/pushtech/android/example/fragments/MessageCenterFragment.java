@@ -96,12 +96,14 @@ public class MessageCenterFragment extends Fragment implements CampaignsAdapter.
 
     @Override
     public void onActionLeftClicked(PushDelivery delivery) {
-        showDialogAccept(delivery.getCategoryActions().name(), delivery.getActionLeftString(getActivity()));
+        String message = String.format(getString(R.string.message_center_click_action), delivery.getActionLeftString(getActivity()));
+        showDialogAccept(delivery.getCategoryActions().name(), message);
     }
 
     @Override
     public void onActionRightClicked(PushDelivery delivery) {
-        showDialogAccept(delivery.getCategoryActions().name(), delivery.getActionRightString(getActivity()));
+        String message = String.format(getString(R.string.message_center_click_action), delivery.getActionRightString(getActivity()));
+        showDialogAccept(delivery.getCategoryActions().name(), message);
 
     }
 

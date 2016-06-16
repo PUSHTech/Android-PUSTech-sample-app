@@ -2,5 +2,6 @@
 <resources>
     <string name="message_center_empty_view">Aun no tienes mensajes!</string>
     <string name="message_center_title">Centro de mensajes</string>
+    <string name="message_center_click_action">Implementa tu metodo personalizado para "%s"</string>
 
 </resources>
