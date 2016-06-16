@@ -7,4 +7,6 @@
     <string name="send_user_data">Enviar datos de usuario</string>
     <string name="send_metrics">Enviar metricas</string>
     <string name="message_center_button">Centro de mensajes</string>
+    <string name="send_local_push">Enviar notificacion local</string>
+
 </resources>

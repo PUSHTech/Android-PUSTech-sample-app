@@ -1,5 +1,4 @@
 <resources>
     <string name="app_name">PUSHTech example app</string>
     <string name="activity_web_view_title">Loading...</string>
-    <string name="send_local_push">Send local push</string>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="configuration_switch_push_subscribed">Push notifications</string>
-    <string name="configuration_push_subscribed_title">¿Do you accept to send push notification?</string>
+    <string name="configuration_push_subscribed_title">Do you accept receiving Push Notifications?</string>
     <string name="configuration_app_id_title">App id</string>
     <string name="configuration_pushtech_sdk_version">SDK version</string>
 </resources>

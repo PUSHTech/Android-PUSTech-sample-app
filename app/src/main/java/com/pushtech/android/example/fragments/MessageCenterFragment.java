@@ -63,6 +63,10 @@ public class MessageCenterFragment extends Fragment implements CampaignsAdapter.
 
     @Override
     public void onImageClicked(final PushDelivery delivery) {
+        openLandingPage(delivery);
+    }
+
+    private void showImage(PushDelivery delivery) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setPositiveButton(getResources().getText(R.string.dialog_close), null);
         AlertDialog dialog = builder.create();
@@ -73,11 +77,14 @@ public class MessageCenterFragment extends Fragment implements CampaignsAdapter.
         Picasso.with(getActivity()).load(delivery.getThumbnailUrl()).into(image);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.show();
-
     }
 
     @Override
     public void onBodyClicked(PushDelivery delivery) {
+        openLandingPage(delivery);
+    }
+
+    private void openLandingPage(PushDelivery delivery) {
         if (!TextUtils.isEmpty(delivery.getUrl())) {
             Intent intent = new Intent(getActivity(), PushTechWebViewActivity.class);
             intent.putExtra(INTENT_WEB_URL, delivery.getUrl());

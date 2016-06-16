@@ -7,4 +7,6 @@
     <string name="send_user_data">Send user data</string>
     <string name="send_metrics">Send metrics</string>
     <string name="message_center_button">Messsage Center</string>
+    <string name="send_local_push">Send local push</string>
+
 </resources>
