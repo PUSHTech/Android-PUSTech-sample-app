@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dialog_send_metrics_message">Metrics sent</string>
+    <string name="dialog_send_metrics_title">Success</string>
+    <string name="dialog_action_title">Action</string>
+    <string name="dialog_close">Close</string>
+    <string name="dialog_no_lading_page">There is no landing page with this campaign</string>
+    <string name="dialog_accept">Accept</string>
+</resources>

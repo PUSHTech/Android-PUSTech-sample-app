@@ -1,0 +1,92 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pushtech.android.example">
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <permission
+        android:name="com.pushtech.android.example.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.pushtech.android.example.permission.C2D_MESSAGE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".activities.SplashActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".activities.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PushTechWebViewActivity"
+            android:parentActivityName=".activities.HomeActivity">
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.HomeActivity" />
+        </activity>
+
+
+        <service android:name=".push.ExampleGCMIntentService" />
+
+        <receiver android:name=".push.ExampleGCMBroadcastReceiver">
+            <intent-filter>
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="push" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".push.NotificationActionsReceiver">
+            <intent-filter>
+                <action android:name="${applicationId}.OK" />
+                <action android:name="${applicationId}.CANCEL" />
+                <action android:name="${applicationId}.EDIT" />
+                <action android:name="${applicationId}.SEND" />
+                <action android:name="${applicationId}.BUY" />
+                <action android:name="${applicationId}.SAVE" />
+                <action android:name="${applicationId}.FIND" />
+                <action android:name="${applicationId}.LIKE" />
+                <action android:name="${applicationId}.DISLIKE" />
+                <action android:name="${applicationId}.LAUNCH" />
+                <action android:name="${applicationId}.REMIND" />
+                <action android:name="${applicationId}.DELETE" />
+                <action android:name="${applicationId}.FORBID" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.pushtech.sdk.PushContentProvider"
+            android:authorities="${applicationId}"
+            android:exported="false" />
+    </application>
+
+
+</manifest>

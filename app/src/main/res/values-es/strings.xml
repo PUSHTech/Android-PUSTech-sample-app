@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PUSHTech demo</string>
+    <string name="activity_web_view_title">Cargando...</string>
+
+</resources>

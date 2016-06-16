@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="first_name_hint">Jhon</string>
+    <string name="last_name_hint">Doe</string>
+    <string name="email_hint">jhon.doe@pushtech.com</string>
+    <string name="phone_hint">+34888888888</string>
+    <string name="send_user_data">Send user data</string>
+    <string name="send_metrics">Send metrics</string>
+    <string name="message_center_button">Messsage Center</string>
+</resources>

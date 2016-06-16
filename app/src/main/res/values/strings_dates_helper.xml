@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dates_now">now</string>
+    <string name="dates_minutes">%d min</string>
+    <string name="dates_hour">%d h</string>
+    <string name="dates_day">%d d</string>
+    <string name="dates_week">%d w</string>
+    <string name="dates_month">%d mo</string>
+    <string name="dates_year">%d y</string>
+</resources>

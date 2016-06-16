@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="configuration_switch_push_subscribed">Notificaciones push</string>
+    <string name="configuration_push_subscribed_title">¿Acceptas la recepción de notificaciones push?</string>
+    <string name="configuration_app_id_title">App id</string>
+    <string name="configuration_pushtech_sdk_version">SDK version</string>
+</resources>

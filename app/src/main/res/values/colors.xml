@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1BCCED</color>
+    <color name="colorPrimaryDark">#1F9FC1</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="background_selected">#efefef</color>
+
+    <color name="text">#000000</color>
+    <color name="text_light">#999999</color>
+
+    <color name="pager_background">#F4F4F4</color>
+    <color name="default_background">#EFEFEF</color>
+
+    <color name="blue_push">#1BCCED</color>
+    <color name="blue_pressed">#1F9FC1</color>
+    <color name="blue_push_trans">#DD1BCCED</color>
+    <color name="grey_disabled">#C5C7CC</color>
+
+    <color name="table_text">#333333</color>
+
+    <color name="list_text_subitem">#838383</color>
+    <color name="unread_message_badge">#01caec</color>
+
+    <color name="ab_color">#333333</color>
+    <color name="group_chat_member_name">#2C2C2C</color>
+
+
+    <color name="list_item_background">#EBECF0</color>
+    <color name="translucent">#55000000</color>
+</resources>

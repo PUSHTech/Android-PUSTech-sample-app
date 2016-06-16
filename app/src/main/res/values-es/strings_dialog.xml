@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dialog_send_metrics_message">Metricas enviadas</string>
+    <string name="dialog_send_metrics_title">Correcto</string>
+    <string name="dialog_action_title">Acción</string>
+    <string name="dialog_close">Cerrar</string>
+    <string name="dialog_no_lading_page">No hay una página web asociada a esta campaña</string>
+    <string name="dialog_alert_title">Alerta</string>
+    <string name="dialog_accept">Acceptar</string>
+</resources>

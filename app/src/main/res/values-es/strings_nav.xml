@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_message_center">Centro de mensajes</string>
+    <string name="nav_metrics">Metricas</string>
+    <string name="nav_configuration">Configuración</string>
+    <string name="nav_about">Sobre</string>
+    <string name="nav_home">Principal</string>
+</resources>

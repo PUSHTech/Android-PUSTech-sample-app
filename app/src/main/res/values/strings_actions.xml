@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="PUSH_ACTION_OK">Ok</string>
+    <string name="PUSH_ACTION_CANCEL">Cancel</string>
+    <string name="PUSH_ACTION_EDIT">Edit</string>
+    <string name="PUSH_ACTION_SEND">Send</string>
+    <string name="PUSH_ACTION_BUY">Buy</string>
+    <string name="PUSH_ACTION_SAVE">Save</string>
+    <string name="PUSH_ACTION_FIND">Find</string>
+    <string name="PUSH_ACTION_LIKE">Like</string>
+    <string name="PUSH_ACTION_DISLIKE">Dislike</string>
+    <string name="PUSH_ACTION_LAUNCH">Launch</string>
+    <string name="PUSH_ACTION_REMIND">Remind</string>
+    <string name="PUSH_ACTION_DELETE">Delete</string>
+    <string name="PUSH_ACTION_BLOCK">Block</string>
+    <string name="PUSH_ACTION_ALLOW">Allow</string>
+    <string name="PUSH_ACTION_FOLLOW">Follow</string>
+    <string name="PUSH_ACTION_SHARE">Share</string>
+    <string name="PUSH_ACTION_SHOP_NOW">Shop now</string>
+    <string name="PUSH_ACTION_LATER">Later</string>
+    <string name="PUSH_ACTION_YES">yes</string>
+    <string name="PUSH_ACTION_NO">NO</string>
+    <string name="PUSH_ACTION_ACCEPT">Accept</string>
+    <string name="PUSH_ACTION_DECLINE">Decline</string>
+</resources>

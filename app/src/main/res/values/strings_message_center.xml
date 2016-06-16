@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="message_center_empty_view">You have no messages yet!</string>
+    <string name="message_center_title">Message Center</string>
+
+</resources>
