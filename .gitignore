@@ -1,6 +1,7 @@
 *.iml
 .gradle
 /local.properties
+/.idea
 /.idea/workspace.xml
 /.idea/libraries
 .DS_Store
@@ -8,3 +9,4 @@
 /captures
 /app/src/main/res/values/pushKeys.xml 
 /app/libs/PUSHTechSDK.jar
+/app/app-release.apk
