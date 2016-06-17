@@ -16,12 +16,15 @@ Finally run and enyoy.
 Icons
 
 [icons][3] are used in notifications with actions. 
+
 Copy and paste the icons in your res project folder
+
 If you want to change any icon, you have to keep the name to work.
 
 Text
 
 You can change the text show in any action modify the next [strings_actions.xml][4] file
+
 Copy and paste the [strings_actions.xml][4] in your res project folder
 
 #License
