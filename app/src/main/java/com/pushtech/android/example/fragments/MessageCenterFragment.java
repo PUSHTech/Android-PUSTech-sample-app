@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.pushtech.android.example.R;
+import com.pushtech.android.example.activities.HomeActivity;
 import com.pushtech.android.example.activities.PushTechWebViewActivity;
 import com.pushtech.android.example.adapters.CampaignsAdapter;
 import com.pushtech.sdk.DeliveryManager;
@@ -90,28 +91,22 @@ public class MessageCenterFragment extends Fragment implements CampaignsAdapter.
             intent.putExtra(INTENT_WEB_URL, delivery.getUrl());
             getActivity().startActivity(intent);
         } else {
-            showDialogAccept(getString(R.string.dialog_alert_title), getString(R.string.dialog_no_lading_page));
+            ((HomeActivity) getActivity()).showDialogAccept(getString(R.string.dialog_alert_title), getString(R.string.dialog_no_lading_page));
         }
     }
 
     @Override
     public void onActionLeftClicked(PushDelivery delivery) {
         String message = String.format(getString(R.string.message_center_click_action), delivery.getActionLeftString(getActivity()));
-        showDialogAccept(delivery.getCategoryActions().name(), message);
+        ((HomeActivity) getActivity()).showDialogAccept(delivery.getCategoryActions().name(), message);
     }
 
     @Override
     public void onActionRightClicked(PushDelivery delivery) {
         String message = String.format(getString(R.string.message_center_click_action), delivery.getActionRightString(getActivity()));
-        showDialogAccept(delivery.getCategoryActions().name(), message);
+        ((HomeActivity) getActivity()).showDialogAccept(delivery.getCategoryActions().name(), message);
 
     }
 
-    private void showDialogAccept(String title, String message) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setTitle(title);
-        builder.setMessage(message);
-        builder.setPositiveButton(getString(R.string.dialog_accept), null);
-        builder.create().show();
-    }
+
 }

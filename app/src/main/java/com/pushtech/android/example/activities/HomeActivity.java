@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
@@ -68,8 +69,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         String category = getIntentString(Constants.INTENT_PUSH_CATEGORY);
         if (id != null) {
             PushDelivery delivery = PushtechApp.with(this).getDeliveriesManager().getPushDelivery(id);
-
-
+            showDialogAccept(category, String.format(getString(R.string.message_center_click_action), action));
         }
     }
 
@@ -168,6 +168,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         }
         mDrawerLayout.closeDrawer(navigationView);
         return true;
+    }
+
+    public void showDialogAccept(String title, String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.setPositiveButton(getString(R.string.dialog_accept), null);
+        builder.create().show();
     }
 
 }

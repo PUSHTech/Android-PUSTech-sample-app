@@ -48,9 +48,9 @@ public class SplashActivity extends Activity implements PushtechAppbuildAsyncCal
         pushtechAppBuilder
                 .setNotificationIcon(R.drawable.ic_launcher)
                 .setNotificationIntent(new Intent(this, HomeActivity.class))
-                .setAppId(getString(R.string.appId))
-                .setAppSecret(getString(R.string.secret))
-                .setGcmSenderId(getString(R.string.gcmToken))
+                .setAppId(getString(R.string.app_id))
+                .setAppSecret(getString(R.string.app_secret))
+                .setGcmSenderId(getString(R.string.project_id))
                 .build(this);
     }
 
