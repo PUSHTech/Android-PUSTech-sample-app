@@ -4,12 +4,12 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/nav_home"
+            android:icon="@drawable/ic_home"
             android:numericShortcut="10"
             android:title="@string/nav_home" />
         <item
             android:id="@+id/nav_message_center"
-            android:icon="@drawable/nav_message_center"
+            android:icon="@drawable/ic_message_center"
             android:title="@string/nav_message_center" />
         <item
             android:id="@+id/nav_metrics"
@@ -17,7 +17,7 @@
             android:visible="false" />
         <item
             android:id="@+id/nav_configuration"
-            android:icon="@android:drawable/ic_menu_preferences"
+            android:icon="@drawable/ic_settings"
             android:title="@string/nav_configuration"
             android:visible="true" />
     </group>

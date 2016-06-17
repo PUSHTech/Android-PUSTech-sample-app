@@ -108,5 +108,4 @@ public class MessageCenterFragment extends Fragment implements CampaignsAdapter.
 
     }
 
-
 }
