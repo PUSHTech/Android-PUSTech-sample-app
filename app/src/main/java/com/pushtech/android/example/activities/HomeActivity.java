@@ -20,7 +20,7 @@ import com.pushtech.android.example.R;
 import com.pushtech.android.example.fragments.ConfigurationFragment;
 import com.pushtech.android.example.fragments.HomeFragment;
 import com.pushtech.android.example.fragments.MessageCenterFragment;
-import com.pushtech.android.example.fragments.MetricsFragment;
+import com.pushtech.android.example.fragments.metrics.MetricsFragment;
 import com.pushtech.android.example.utils.Constants;
 import com.pushtech.sdk.DataCollectorManager;
 import com.pushtech.sdk.PushDelivery;
@@ -48,10 +48,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         initViews();
         setupToolbar();
         setupMenuDrawer();
-        toolbar.setTitle(getString(R.string.nav_home) + " - " + getString(R.string.app_name));
         setupContent(new HomeFragment());
-
-
     }
 
     private String getIntentString(String name) {
@@ -129,7 +126,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     private void setupToolbar() {
         setSupportActionBar(toolbar);
         toolbar.setTitleTextColor(Color.WHITE);
-        toolbar.setTitle(getString(R.string.app_name));
+        toolbar.setTitle(getString(R.string.nav_home) + " - " + getString(R.string.app_name));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
@@ -158,6 +155,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_metrics:
                 if (!(fragment instanceof MetricsFragment)) setupContent(new MetricsFragment());
+                toolbar.setTitle(getString(R.string.nav_metrics) + " - " + getString(R.string.app_name));
+
                 break;
             case R.id.nav_configuration:
                 if (!(fragment instanceof ConfigurationFragment))

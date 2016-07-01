@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/fragment_metrics_purchase_container_create_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/fragment_metrics_purchase_product"
+            android:textAppearance="@android:style/TextAppearance.Medium" />
+
+
+        <EditText
+            android:id="@+id/fragment_metrics_purchase_product_name"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@android:color/white"
+
+            android:gravity="center"
+            android:hint="@string/fragment_metrics_purchase_hint_product_name"
+            android:padding="5dp" />
+
+
+        <EditText
+            android:id="@+id/fragment_metrics_purchase_product_price"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:inputType="numberDecimal"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:hint="@string/fragment_metrics_purchase_hint_product_price"
+            android:padding="5dp" />
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/fragment_metrics_purchase_currency"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/fragment_metrics_purchase_create_product"
+            style="@style/PushTechButton"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="@string/fragment_metrics_purchase_create_product" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_margin="10dp"
+            android:background="@color/grey_disabled" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/fragment_metrics_purchase_container_create_product"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/fragment_metrics_purchase_send_metrics"
+            android:textAppearance="@android:style/TextAppearance.Medium" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fragment_metrics_purchase_button_add_cart"
+                style="@style/PushTechButton"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:text="@string/fragment_metrics_purchase_add_cart" />
+
+            <TextView
+                android:id="@+id/fragment_metrics_purchase_button_remove_cart"
+                style="@style/PushTechButton"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:text="@string/fragment_metrics_purchase_remove_cart" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fragment_metrics_purchase_button_num_of_products"
+                style="@style/PushTechButton"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:text="@string/fragment_metrics_purchase_num_cart" />
+
+            <TextView
+                android:id="@+id/fragment_metrics_purchase_button_purchase"
+                style="@style/PushTechButton"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:text="@string/fragment_metrics_purchase_purchase" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

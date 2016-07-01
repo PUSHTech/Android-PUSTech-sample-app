@@ -17,6 +17,7 @@ import com.pushtech.android.example.R;
 import com.pushtech.android.example.activities.HomeActivity;
 import com.pushtech.android.example.activities.PushTechWebViewActivity;
 import com.pushtech.android.example.adapters.CampaignsAdapter;
+import com.pushtech.sdk.DataCollectorManager;
 import com.pushtech.sdk.DeliveryManager;
 import com.pushtech.sdk.PushDelivery;
 import com.pushtech.sdk.PushtechApp;
@@ -40,6 +41,7 @@ public class MessageCenterFragment extends Fragment implements CampaignsAdapter.
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_message_center, container,
                 false);
+        DataCollectorManager.getInstance(getActivity()).contentView(this.getClass().getName());
         initViews(rootView);
         setViews();
 

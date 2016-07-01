@@ -17,8 +17,9 @@ import com.pushtech.sdk.PushtechApp;
  * Created by crm27 on 6/6/16.
  */
 public class ConfigurationFragment extends Fragment implements CompoundButton.OnCheckedChangeListener {
-    private TextView appId, sdkVersion;
+    private TextView deviceId, appId, sdkVersion;
     private SwitchCompat pushSubscribed;
+    private boolean firstTime;
 
     public ConfigurationFragment() {
 
@@ -29,10 +30,12 @@ public class ConfigurationFragment extends Fragment implements CompoundButton.On
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_configuration, container,
                 false);
+        firstTime = true;
         initViews(rootView);
         setViews();
         setListener();
         initSwitchButton();
+        DataCollectorManager.getInstance(getActivity()).contentView(this.getClass().getName());
 
 
         return rootView;
@@ -40,12 +43,14 @@ public class ConfigurationFragment extends Fragment implements CompoundButton.On
 
 
     private void initViews(View rootView) {
+        deviceId = (TextView) rootView.findViewById(R.id.fragment_configuration_device_id);
         appId = (TextView) rootView.findViewById(R.id.fragment_configuration_app_id);
         sdkVersion = (TextView) rootView.findViewById(R.id.fragment_configuration_pushtech_sdk_version);
         pushSubscribed = (SwitchCompat) rootView.findViewById(R.id.fragment_configuration_subscribe_push);
     }
 
     private void setViews() {
+        deviceId.setText(PushtechApp.with(getActivity()).getDeviceId());
         appId.setText(PushtechApp.with(getActivity()).getAppId());
         sdkVersion.setText(PushtechApp.with(getActivity()).getSdkVersion());
     }
@@ -62,7 +67,16 @@ public class ConfigurationFragment extends Fragment implements CompoundButton.On
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        DataCollectorManager.getInstance(getActivity()).unsubscribePushNotifications(!isChecked);
-        DataCollectorManager.getInstance(getActivity()).sendMetrics();
+        if (!firstTime) {
+            if (isChecked) {
+                DataCollectorManager.getInstance(getActivity()).subscribePushNotifications();
+            } else {
+                DataCollectorManager.getInstance(getActivity()).unsubscribePushNotifications();
+            }
+            DataCollectorManager.getInstance(getActivity()).sendMetrics();
+        } else {
+            firstTime = false;
+        }
+
     }
 }

@@ -12,6 +12,7 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
 import com.pushtech.android.example.R;
+import com.pushtech.sdk.DataCollectorManager;
 
 import static com.pushtech.android.example.utils.Constants.INTENT_WEB_URL;
 
@@ -30,6 +31,8 @@ public class PushTechWebViewActivity extends AppCompatActivity {
         initViews();
         setupToolbar();
         configureWebView(webUrl);
+        DataCollectorManager.getInstance(this).contentView(this.getClass().getName());
+
 
     }
 

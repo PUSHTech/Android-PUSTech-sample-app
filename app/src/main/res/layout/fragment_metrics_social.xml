@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/fragment_metrics_social_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:padding="5dp" />
+
+    <LinearLayout
+        android:id="@+id/fragment_metrics_social_facebook_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fragment_metrics_social_facebook_login"
+                style="@style/PushTechButton"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="@string/fragment_metrics_social_login" />
+
+            <TextView
+                android:id="@+id/fragment_metrics_social_facebook_logout"
+                style="@style/PushTechButton"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="@string/fragment_metrics_social_logout" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/fragment_metrics_social_facebook_id"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:hint="@string/fragment_metrics_social_hint_facebook_id"
+            android:padding="5dp" />
+
+        <EditText
+            android:id="@+id/fragment_metrics_social_facebook_friends"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:hint="@string/fragment_metrics_social_hint_facebook_friends"
+            android:inputType="number"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/fragment_metrics_social_facebook_send_metrics"
+            style="@style/PushTechButton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="@string/fragment_metrics_social_send" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_metrics_social_google_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fragment_metrics_social_google_login"
+                style="@style/PushTechButton"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="@string/fragment_metrics_social_login" />
+
+            <TextView
+                android:id="@+id/fragment_metrics_social_google_logout"
+                style="@style/PushTechButton"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="@string/fragment_metrics_social_logout" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/fragment_metrics_social_google_id"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:hint="@string/fragment_metrics_social_hint_google_id"
+            android:padding="5dp" />
+
+
+        <TextView
+            android:id="@+id/fragment_metrics_social_google_send_metrics"
+            style="@style/PushTechButton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="@string/fragment_metrics_social_send" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_metrics_social_twitter_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fragment_metrics_social_twitter_login"
+                style="@style/PushTechButton"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="@string/fragment_metrics_social_login" />
+
+            <TextView
+                android:id="@+id/fragment_metrics_social_twitter_logout"
+                style="@style/PushTechButton"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="@string/fragment_metrics_social_logout" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/fragment_metrics_social_twitter_id"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:hint="@string/fragment_metrics_social_hint_twitter_id"
+            android:padding="5dp" />
+
+        <EditText
+            android:id="@+id/fragment_metrics_social_twitter_followers"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:hint="@string/fragment_metrics_social_hint_twitter_followers"
+            android:inputType="number"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/fragment_metrics_social_twitter_send_metrics"
+            style="@style/PushTechButton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:paddingBottom="10dp"
+            android:text="@string/fragment_metrics_social_send" />
+    </LinearLayout>
+
+</LinearLayout>

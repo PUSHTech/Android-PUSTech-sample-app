@@ -18,6 +18,7 @@ import com.pushtech.sdk.Products;
 import com.pushtech.sdk.PurchaseProduct;
 import com.pushtech.sdk.PushDelivery;
 import com.pushtech.sdk.PushtechApp;
+import com.pushtech.sdk.TimeUtils;
 
 import java.util.ArrayList;
 import java.util.Currency;
@@ -28,7 +29,7 @@ import java.util.Date;
  */
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
-    private View sendUserData, sendMetrics,sendLocalPush;
+    private View sendUserData, sendMetrics, sendLocalPush;
     private EditText firstName, lastName, email, phoneNumber;
 
     public HomeFragment() {
@@ -40,6 +41,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_home, container,
                 false);
+        DataCollectorManager.getInstance(getActivity()).contentView(this.getClass().getName());
         initViews(rootView);
         setListener();
 
@@ -103,11 +105,39 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     }
 
     private void sendGenerateMetrics() {
+        //Get instance of DatacollectorManager
         DataCollectorManager data = DataCollectorManager.getInstance(getActivity());
+        //Create a custom metric type Number
         data.setCustomEvent("metric", "max_air", "10.3", DataCollectorManager.ValueType.NUMBER);
+        //Create a custom metric type String
+        data.setCustomEvent("color", "car", "Blue", DataCollectorManager.ValueType.STRING);
+        //Create a custom metric type Boolean
+        data.setCustomEvent("social", "like_page", "true", DataCollectorManager.ValueType.BOOLEAN);
+        //Create a custom metric type Date
+        data.setCustomEvent("user", "launch_date", TimeUtils.DateToISO8061(new Date()),
+                DataCollectorManager.ValueType.DATE);
+        //Create Social metrics
         data.loginFacebook();
-        data.loginGoogle();
+        data.setFacebookID("207336719452056");
+        data.setNumberFacebookFriends(5738);
+        data.logoutFacebook();
+
+
         data.loginTwitter();
+        data.setTwitterID("PUSHTechCloud");
+        data.setNumberOfTwitterFollowers(10020323);
+        data.logoutTwitter();
+
+        data.loginGoogle();
+        data.setGoogleID("+Pushtechnologies");
+        data.logoutGoogle();
+
+        //Generic metrics login flow
+        data.loginGeneric();
+        data.logoutGeneric();
+        data.registerGeneric();
+
+        //Create Product model
         PurchaseProduct product = new PurchaseProduct();
         product.setName("Iphone 6");
         product.setPrice((double) 843.45);
@@ -125,11 +155,26 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         product.setProductId("232139a30asds3");
         product.setCurrency(Currency.getInstance("EUR"));
         products.getProducts().add(product);
-        data.removeProductFromCart(product);
 
+        //Create a remove product from the cart
+        data.removeProductFromCart(product);
+        //Create a add product from the cart
+        data.addProductToCart(product);
+        //Create a purchases products metrics
         data.purchaseProduct(products);
 
+        //Create a metric to retrieve number of products in the cart
+        data.setNumOfProductInCart(100);
 
+        //User attributes metrics
+        data.setFirstName("Jhoe");
+        data.setLastName("Doe");
+        data.setEmail("jhoe.doe@email.es");
+
+        Phonenumber.PhoneNumber phone = new Phonenumber.PhoneNumber();
+        phone.setRawInput("+3486666666");
+        data.setPhoneNumber(phone);
+        data.setGender(DataCollectorManager.Gender.MALE);
         data.setBirthdate(new Date());
         data.setCity("Barcelona");
         try {
@@ -138,46 +183,35 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             e.printStackTrace();
         }
 
+        //Create metric content view
+        data.contentView(this.getClass().getName());
+        //Create metric with current location
+        data.sendGeolocation();
 
-        data.setGender(DataCollectorManager.Gender.MALE);
-        data.setNumberFacebookFriends(5738);
-        data.setNumberOfTwitterFollowers(10020323);
 
-
-        data.contentView("HomeFragment");
-
-        data.logoutFacebook();
-
-        data.setFacebookID("207336719452056");
-
-        data.logoutTwitter();
-        data.setTwitterID("PUSHTechCloud");
-
-        data.logoutGoogle();
-        data.setGoogleID("+Pushtechnologies");
         data.sendMetrics();
         showSendMetricsDialog();
     }
 
     private void sendUserData() {
 
-        DataCollectorManager metrics = DataCollectorManager.getInstance(getActivity());
+        DataCollectorManager dataCM = DataCollectorManager.getInstance(getActivity());
         String firstNameTxt = firstName.getText().toString();
         if (!TextUtils.isEmpty(firstNameTxt)) {
-            metrics.setFirstName(firstNameTxt);
+            dataCM.setFirstName(firstNameTxt);
         }
         String lastNameTxt = lastName.getText().toString();
         if (!TextUtils.isEmpty(lastNameTxt)) {
-            metrics.setLastName(lastNameTxt);
+            dataCM.setLastName(lastNameTxt);
         }
         String emailTxt = email.getText().toString();
         if (!TextUtils.isEmpty(emailTxt)) {
-            metrics.setEmail(emailTxt);
+            dataCM.setEmail(emailTxt);
         }
         Phonenumber.PhoneNumber phone = new Phonenumber.PhoneNumber();
         phone.setRawInput(phoneNumber.getText().toString());
-        metrics.setPhoneNumber(phone);
-        metrics.sendMetrics();
+        dataCM.setPhoneNumber(phone);
+        dataCM.sendMetrics();
         showSendMetricsDialog();
 
 

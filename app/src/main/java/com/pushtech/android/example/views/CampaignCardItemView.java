@@ -3,6 +3,7 @@ package com.pushtech.android.example.views;
 import android.content.Context;
 import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -13,6 +14,7 @@ import com.pushtech.android.example.adapters.CampaignsAdapter;
 import com.pushtech.android.example.utils.DatesHelper;
 import com.pushtech.sdk.PushDelivery;
 import com.squareup.picasso.Picasso;
+import com.vanniktech.emoji.EmojiTextView;
 
 import java.util.Date;
 
@@ -23,7 +25,8 @@ import java.util.Date;
 public class CampaignCardItemView extends CardView implements View.OnClickListener {
     private PushDelivery delivery;
     private ImageView image;
-    private TextView title, text, url, leftAction, rightAction, time;
+    private EmojiTextView text;
+    private TextView title, url, leftAction, rightAction, time;
     private View imageContainer, actionsContainer, bodyContainer;
     private Context context;
     private CampaignsAdapter.OnCampaignClicked listener;
@@ -49,7 +52,7 @@ public class CampaignCardItemView extends CardView implements View.OnClickListen
                 R.layout.view_campaign_card_item, this, true);
         image = (ImageView) findViewById(R.id.view_campaign_card_item_image);
         title = (TextView) findViewById(R.id.view_campaign_card_item_title);
-        text = (TextView) findViewById(R.id.view_campaign_card_item_text);
+        text = (EmojiTextView) findViewById(R.id.view_campaign_card_item_text);
         imageContainer = findViewById(R.id.view_campaign_card_item_image_container);
         actionsContainer = findViewById(R.id.view_campaign_card_item_actions_container);
         bodyContainer = findViewById(R.id.view_campaign_card_item_body_container);
@@ -86,6 +89,7 @@ public class CampaignCardItemView extends CardView implements View.OnClickListen
             actionsContainer.setVisibility(GONE);
         }
         title.setText(this.delivery.getTitle());
+        Log.d("TEXT",this.delivery.getText());
         text.setText(this.delivery.getText().trim());
     }
 
