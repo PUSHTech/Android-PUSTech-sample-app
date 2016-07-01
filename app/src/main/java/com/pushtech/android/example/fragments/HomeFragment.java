@@ -87,12 +87,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     private void sendFakePush() {
         PushDelivery delivery = new PushDelivery();
-        delivery.setTitle("This a title");
-        delivery.setText("This a dummy push to preview the SDK push notifications");
-        delivery.setThumbnailUrl("https://www.pushtech.com/assets/pushvideo3-fd19f2d9f7a81f9835173aa82bfe663e.jpg");
-        delivery.setCategoryActions(PushDelivery.CategoryActions.CATEGORY_LIKE_DISLIKE);
-        delivery.setActionLeft(PushDelivery.Actions.LIKE);
-        delivery.setActionRight(PushDelivery.Actions.DISLIKE);
+        delivery.setTitle("Hello Cristian");
+        delivery.setText("20% discount with this notification in A/O shop, code:E23R");
         delivery.setReceivedDate(new Date());
         PushtechApp.with(getActivity()).getDeliveriesManager().showPushNotification(delivery);
     }
