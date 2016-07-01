@@ -1,36 +1,48 @@
-# Android-sample-app
-This is an Android studio project to shows who works with the PUSHTech SDK.
+# PushTech Android SDK Project Example
 
-#Setup
-To run this example, you must have an account in PushTech  and create an App in PUSHTech manager.
+The PUSHTech Android SDK enables your app to send metrics and receive push notifications in the easiest way. 
+Learn about your users, create powerful campaign and automation from PUSHTech™ Marketing cloud.
+ 
+## General setup
+- Create an account: https://www.pushtech.com/contact  Contact us in order to receive an invite for a new account
 
-For more information please see [Developers website][1]
+- Setup the Android SDK by following our guide http://developers.pushtech.com/android/android-studio-setup
 
-First add the [SDK library][2] into lib's project folder.
+- Download the latest SDK http://developers.pushtech.com/android
 
-Second add the keys of this app in 
+- Need help ? Contact us and we will help you https://www.pushtech.com/contact
 
-Finally run and enyoy.
+![alt tag](https://raw.githubusercontent.com/PUSHTech/Android-sample-app/develop/screenshots/push_home.png)
 
-#Configure notification actions
-Icons
+## Send normal or custom interactive push notifications
 
-[icons][3] are used in notifications with actions. 
+![alt tag](https://raw.githubusercontent.com/PUSHTech/Android-sample-app/develop/screenshots/push_notification.png)
 
-Copy and paste the icons in your res project folder
+## Manage custom interactions
 
-If you want to change any icon, you have to keep the name to work.
+You can implement easily your custom interaction within your app as landing page, in app message, deep linking, custom method...
 
-Text
+![alt tag](https://raw.githubusercontent.com/PUSHTech/Android-sample-app/develop/screenshots/push_action_web.png)
 
-You can change the text show in any action modify the next [strings_actions.xml][4] file
+## Message center and Notification subscription management
 
-Copy and paste the [strings_actions.xml][4] in your res project folder
+List all yours campaign easily within your custom design.
 
-#License
+
+![alt tag](https://raw.githubusercontent.com/PUSHTech/Android-sample-app/develop/screenshots/push_message_center_subscription.png)
+
+## Send metrics easily 
+
+Test purchase, social and user metrics with this project example
+
+![alt tag](https://raw.githubusercontent.com/PUSHTech/Android-sample-app/develop/screenshots/push_metrics.png)
+
+
+
+## License
 
     The MIT License (MIT)
-    Copyright (c) 2015 PUSHTech
+    Copyright (c) 2016 PUSHTech
     
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -49,8 +61,3 @@ Copy and paste the [strings_actions.xml][4] in your res project folder
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.
-
-[1]: https://developers.pushtech.com/android/android-studio-setup
-[2]: https://developers.pushtech.com/android
-[3]: /pushActions/icons
-[4]: /pushActions/strings/strings_actions.xml
