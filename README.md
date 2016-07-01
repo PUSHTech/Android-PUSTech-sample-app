@@ -26,14 +26,14 @@ You can implement easily your custom interaction within your app as landing page
 
 ## Message center and Notification subscription management
 
-List all yours campaign easily with your custom design.
+List all yours campaign easily within your custom design.
 
 
 ![alt tag](https://raw.githubusercontent.com/PUSHTech/Android-sample-app/develop/screenshots/push_message_center_subscription.png)
 
 ## Send metrics easily 
 
-Test purchase,social and user metrics with this project
+Test purchase, social and user metrics with this project example
 
 ![alt tag](https://raw.githubusercontent.com/PUSHTech/Android-sample-app/develop/screenshots/push_metrics.png)
 
