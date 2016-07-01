@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fragment_metrics_user_birthday">Birthday</string>
+    <string name="fragment_metrics_user_login_generic">Login generic</string>
+    <string name="fragment_metrics_user_logout_generic">Logout generic</string>
+    <string name="fragment_metrics_user_register_generic">Register generic</string>
+    <string name="city_hint">City</string>
+    <string name="user_id_hint">User id</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+</resources>

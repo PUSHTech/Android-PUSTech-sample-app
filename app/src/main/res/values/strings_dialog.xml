@@ -6,4 +6,14 @@
     <string name="dialog_close">Close</string>
     <string name="dialog_no_lading_page">There is no landing page with this campaign</string>
     <string name="dialog_accept">Accept</string>
+
+    <string name="dialog_success">Success</string>
+    <string name="dialog_social_metrics_send">Social metrics send</string>
+    <string name="dialog_user_metrics_send">User metrics send</string>
+
+    <string name="dialog_add">ADD</string>
+    <string name="dialog_remove">Remove</string>
+    <string name="dialog_purchase_resume">You bought %1$s products for %2$s %3$s</string>
+    <string name="dialog_info">Info</string>
+    <string name="dialog_number_products_cart">You have a %1$s products in your cart</string>
 </resources>

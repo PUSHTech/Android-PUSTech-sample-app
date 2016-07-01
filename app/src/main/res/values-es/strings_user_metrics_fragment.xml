@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fragment_metrics_user_birthday">Fecha de nacimiento</string>
+    <string name="fragment_metrics_user_login_generic">Inicio session generico</string>
+    <string name="fragment_metrics_user_logout_generic">Cerrar session  generic0</string>
+    <string name="fragment_metrics_user_register_generic">Registro generico</string>
+    <string name="city_hint">Ciudad</string>
+    <string name="user_id_hint">Id del usuario</string>
+    <string name="gender_male">Hombre</string>
+    <string name="gender_female">Mujer</string>
+</resources>

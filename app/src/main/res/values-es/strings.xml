@@ -1,28 +1,10 @@
 <resources>
     <string name="app_name">PUSHTech demo</string>
     <string name="activity_web_view_title">Cargando...</string>
-    <string name="tab_purchase">Purchase</string>
+    <string name="tab_purchase">Compras</string>
     <string name="tab_social">Social</string>
-    <string name="tab_user_attributes">User</string>
-    <string name="fragment_metrics_purchase_product">Create a product</string>
-    <string name="fragment_metrics_purchase_add_cart">Add cart</string>
-    <string name="fragment_metrics_purchase_create_product">Create Product</string>
-    <string name="fragment_metrics_purchase_send_metrics">Send metrics</string>
-    <string name="cancel">Cancel</string>
-    <string name="fragment_metrics_social_login">Login</string>
-    <string name="fragment_metrics_social_logout">Logout</string>
-    <string name="fragment_metrics_social_hint_facebook_friends">Number of friends</string>
-    <string name="fragment_metrics_social_send">Send</string>
-    <string name="fragment_metrics_social_hint_google_id">Google id</string>
-    <string name="fragment_metrics_social_google">Google plus</string>
-    <string name="fragment_metrics_social_hint_twitter_id">Twitter id</string>
-    <string name="fragment_metrics_social_twitter">Twitter</string>
-    <string name="fragment_metrics_user_register_generic">Register generic</string>
-    <string name="dialog_social_metrics_send">Social metrics send</string>
-    <string name="dialog_user_metrics_send">User metrics send</string>
-    <string name="fragment_metrics_purchase_add_to_cart">Add to cart</string>
-    <string name="dialog_remove">Remove</string>
-    <string name="dialog_info">Info</string>
-    <string name="dialog_number_products_cart">You hace a %s1 products in your cart</string>
+    <string name="tab_user_attributes">Usuario</string>
+    <string name="cancel">Cancelar</string>
+
 
 </resources>

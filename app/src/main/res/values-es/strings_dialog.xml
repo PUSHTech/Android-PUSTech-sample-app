@@ -7,4 +7,14 @@
     <string name="dialog_no_lading_page">No hay una página web asociada a esta campaña</string>
     <string name="dialog_alert_title">Alerta</string>
     <string name="dialog_accept">Acceptar</string>
+
+    <string name="dialog_success">Éxito</string>
+    <string name="dialog_social_metrics_send">Enviar metricas sociales</string>
+    <string name="dialog_user_metrics_send">Enviar metricas de usuario</string>
+
+    <string name="dialog_add">Añadir</string>
+    <string name="dialog_remove">Eliminar</string>
+    <string name="dialog_purchase_resume">Has comprado %1$s productos por %2$s %3$s</string>
+    <string name="dialog_info">Info</string>
+    <string name="dialog_number_products_cart">Tines %1$s productos en la cesta</string>
 </resources>

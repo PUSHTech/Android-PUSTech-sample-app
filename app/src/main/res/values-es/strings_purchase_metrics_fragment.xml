@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fragment_metrics_purchase_product">Crear un producto</string>
+    <string name="fragment_metrics_purchase_add_cart">Añadir a la cesta</string>
+    <string name="fragment_metrics_purchase_remove_cart">Eliminar de la cesta</string>
+    <string name="fragment_metrics_purchase_purchase">Comprar productos</string>
+    <string name="fragment_metrics_purchase_num_cart">Numero de productos en la cesta</string>
+    <string name="fragment_metrics_purchase_hint_product_uuid">UUID del producto</string>
+    <string name="fragment_metrics_purchase_hint_product_name">Nombre del producto</string>
+    <string name="fragment_metrics_purchase_hint_product_price">Precio del producto</string>
+    <string name="fragment_metrics_purchase_create_product">Crear producto</string>
+    <string name="fragment_metrics_purchase_send_metrics">Enviar metricas</string>
+    <string name="fragment_metrics_purchase_add_to_cart">Añadir a la cesta</string>
+    <string name="fragment_metrics_purchase_remove_from_cart">Eliminar de la cesta</string>
+
+</resources>

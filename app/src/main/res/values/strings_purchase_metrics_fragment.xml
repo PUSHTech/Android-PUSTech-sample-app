@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fragment_metrics_purchase_product">Create a product</string>
+    <string name="fragment_metrics_purchase_add_cart">Add cart</string>
+    <string name="fragment_metrics_purchase_remove_cart">Remove from cart</string>
+    <string name="fragment_metrics_purchase_purchase">Purchase product</string>
+    <string name="fragment_metrics_purchase_num_cart">Number of products in cart</string>
+    <string name="fragment_metrics_purchase_hint_product_uuid">Product UUID</string>
+    <string name="fragment_metrics_purchase_hint_product_name">Product name</string>
+    <string name="fragment_metrics_purchase_hint_product_price">Product Price</string>
+    <string name="fragment_metrics_purchase_create_product">Create Product</string>
+    <string name="fragment_metrics_purchase_send_metrics">Send metrics</string>
+    <string name="fragment_metrics_purchase_add_to_cart">Add to cart</string>
+    <string name="fragment_metrics_purchase_remove_from_cart">Remove from cart</string>
+
+</resources>
