@@ -139,6 +139,7 @@ public class UserMetricsFragment extends Fragment implements View.OnClickListene
         String email = email_ET.getText().toString();
         String phoneStr = phone_ET.getText().toString();
         String city = city_ET.getText().toString();
+        String user_id = userId_ET.getText().toString();
         Country country = (Country) country_SP.getSelectedItem();
 
         String gender = (String) gender_SP.getSelectedItem();
@@ -159,6 +160,9 @@ public class UserMetricsFragment extends Fragment implements View.OnClickListene
         }
         if (!TextUtils.isEmpty(city)) {
             dataCM.setCity(city);
+        }
+        if(!TextUtils.isEmpty(user_id)){
+            dataCM.setUserId(user_id);
         }
         if (country != null) {
 
